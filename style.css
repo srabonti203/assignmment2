@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+:root {
+  --font-colour: rgba(255, 255, 255, 1);
+  --font-main: "Inter", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-main);
+}
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: rgba(26, 11, 46, 1);
+}
+.hidden {
+  display: none;
+}
+/* shared styles */
+li {
+  list-style: none;
+}
+.contet-mw {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.display {
+  display: flex;
+  align-items: center;
+}
+/* header styles */
+/* nav styles */
+.nav-content {
+  justify-content: space-between;
+  gap: 19.63rem;
+  padding: 1.875rem 0;
+}
+.links {
+  gap: 2rem;
+}
+a {
+  text-decoration: none;
+  color: var(--font-colour);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 120%;
+}
+.logo {
+  color: var(--font-colour);
+  font-weight: 800;
+  font-size: 2rem;
+}
+.logo-gradient {
+  background: linear-gradient(to bottom, #9100f8, #fb09b4, #f7e93f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.btn {
+  max-width: 135px;
+  margin: 0 auto;
+  padding: 0.781rem 1rem;
+  border: none;
+  border-radius: 625rem;
+  color: var(--font-colour);
+  background: linear-gradient(to top right, #f7e93f, #fb09b4, #9100f8);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2rem;
+}
+hr {
+  border: 1px solid var(--font-colour);
+  opacity: 0.1;
+}
+/* main styles */
+/* banner styles */
+.banner {
+  background-image: url("./assets/hero-bg.png");
+  max-height: 47.5rem;
+}
+/* about styles */
+/* choice styles */
+/* feature styles */
+/* Meet the host styles */
+/* foooter styles */
+/* heading styles */
+/* company styles */
+/* copyright styles */
+@media screen and (min-width: 993px) {
+}
+@media screen and (min-width: 577px) and (max-width: 992px) {
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 440px;
+  }
+  .contet-mw {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .nav-links,
+  .btn {
+    display: none;
+  }
+  .nav-content {
+    gap: 0rem;
+    padding: 1.25rem 0;
+  }
+  .ham-icon {
+    display: block;
+    color: var(--font-colour);
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+}
