@@ -170,12 +170,12 @@ hr {
 /* about styles */
 .about-content {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 3.125rem auto 7.5rem auto;
   text-align: center;
-  padding: 3.125rem 12.5rem 7.5rem 12.5rem;
   color: var(--font-colour);
 }
-.about-content h2 {
+.about-content h2,
+.choise-content h2 {
   font-size: 3rem;
   font-weight: 700;
   line-height: 3.625rem;
@@ -198,8 +198,11 @@ hr {
   padding: 0 1.5rem;
 }
 .state {
+  display: flex;
+  align-items: center;
   max-width: 240px;
-  text-align: center;
+  flex-direction: column;
+  justify-content: center;
 }
 .state h3 {
   color: rgba(0, 255, 136, 1);
@@ -212,6 +215,82 @@ hr {
   margin-bottom: 0rem;
 }
 /* choice styles */
+.choise {
+  background: rgba(35, 14, 61, 1);
+}
+.choise-content {
+  padding: 7.5rem 12.5rem;
+  color: var(--font-colour);
+  text-align: center;
+}
+.choise-content h2 {
+  margin-bottom: 2.5rem;
+}
+.choise-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "audio mobile mobile"
+    "audio community community"
+    "interview interview resources";
+  gap: 1.9rem;
+}
+.audio {
+  grid-area: audio;
+}
+.mobile {
+  grid-area: mobile;
+}
+.community {
+  grid-area: community;
+}
+.mobile,
+.community,
+.interview {
+  max-width: 790px;
+  padding: 2.5rem;
+}
+.interview {
+  grid-area: interview;
+}
+.resources {
+  grid-area: resources;
+  max-width: 380px;
+  padding: 2.5rem;
+}
+.audio,
+.resources {
+  max-width: 380px;
+  padding: 2.5rem;
+}
+.audio,
+.mobile,
+.community,
+.interview,
+.resources {
+  text-align: left;
+  border-radius: 40px;
+  background: rgba(53, 17, 101, 0.4);
+}
+.audio img,
+.mobile img,
+.community img,
+.interview img,
+.resources img {
+  max-width: 3.8rem;
+  margin-bottom: 1rem;
+}
+.audio h3,
+.mobile h3,
+.community h3,
+.interview h3,
+.resources h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.8rem;
+  margin-bottom: 1rem;
+}
 /* feature styles */
 /* Meet the host styles */
 /* foooter styles */
@@ -250,11 +329,14 @@ hr {
     bottom: 15.25rem;
   }
   /* about styles */
-  .about-content {
+  .about-content,
+  .choise-content {
     max-width: 900px;
     padding: 1.25rem 1.25rem;
+    margin: 1.125rem auto 0.5rem auto;
   }
-  .about-content h2 {
+  .about-content h2,
+  .choise-content h2 {
     font-size: 2.5rem;
     line-height: 2.4;
   }
@@ -262,6 +344,31 @@ hr {
     padding: 0 1rem;
     margin-top: 2.6rem;
     margin-bottom: 2.6rem;
+  }
+  /* choise styles */
+  .choise-content h2 {
+    margin-bottom: 0.5rem;
+  }
+  .choise-grid {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+  }
+  .audio,
+  .mobile,
+  .community,
+  .interview,
+  .resources {
+    padding: 2rem;
+  }
+  .audio img,
+  .mobile img,
+  .community img,
+  .interview img,
+  .resources img {
+    max-width: 2.8rem;
+  }
+  .choise-content h2 {
+    margin-bottom: 1.5rem;
   }
 }
 @media screen and (min-width: 577px) and (max-width: 992px) {
@@ -311,11 +418,14 @@ hr {
     font-size: 1rem;
   }
   /* about styles */
-  .about-content {
+  .about-content,
+  .choise-content {
+    padding: 0 1rem;
     max-width: 600px;
-    padding: 1.25rem 1.25rem;
+    margin: 0.125rem auto 0.5rem auto;
   }
-  .about-content h2 {
+  .about-content h2,
+  .choise-content h2 {
     font-size: 2.5rem;
     line-height: 2.4;
   }
@@ -337,6 +447,32 @@ hr {
   .state h3 {
     font-size: 2.5rem;
     line-height: 3rem;
+  }
+  /* choise styles */
+  .choise-content {
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  .choise-grid {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+  }
+  .audio,
+  .mobile,
+  .community,
+  .interview,
+  .resources {
+    padding: 1.5rem;
+  }
+  .audio img,
+  .mobile img,
+  .community img,
+  .interview img,
+  .resources img {
+    max-width: 2.8rem;
+  }
+  .choise-content h2 {
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -392,11 +528,13 @@ hr {
   .about-content {
     max-width: 400px;
     padding: 2.5rem 1.5rem;
+    margin: 0rem auto 1.5rem auto;
   }
   .about-content p {
     margin-bottom: 2.5rem;
   }
-  .about-content h2 {
+  .about-content h2,
+  .choise-content h2 {
     font-size: 2rem;
     line-height: 2.4;
   }
@@ -421,5 +559,41 @@ hr {
   }
   .state P {
     margin-bottom: 0;
+  }
+  /* choice styles */
+  .choise-content {
+    max-width: 400px;
+    padding: 2.5rem 1.5rem;
+    margin: 0 auto;
+  }
+  .choise-content h2 {
+    margin-bottom: 1rem;
+  }
+  .choise-grid {
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto 1fr auto;
+    grid-template-areas:
+      "audio"
+      "mobile"
+      "community"
+      "interview" "resources";
+    gap: 1rem;
+  }
+  .audio,
+  .mobile,
+  .community,
+  .interview,
+  .resources {
+    max-width: 400px;
+    padding: 1.5rem;
+  }
+  .audio h3,
+  .mobile h3,
+  .community h3,
+  .interview h3,
+  .resources h3 {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
   }
 }
