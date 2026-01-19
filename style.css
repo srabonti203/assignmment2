@@ -78,7 +78,76 @@ hr {
 /* banner styles */
 .banner {
   background-image: url("./assets/hero-bg.png");
-  max-height: 47.5rem;
+  background-position: center;
+  background-size: cover;
+}
+.banner-content {
+  text-align: center;
+  max-width: 550px;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6.3125rem 0;
+}
+.mic-circle {
+  justify-content: center;
+  width: 350px;
+  height: 350px;
+  border-radius: 175px;
+  border: 8px solid rgba(42, 24, 108, 1);
+  background: linear-gradient(
+    47.64deg,
+    rgba(247, 233, 63, 1),
+    rgba(251, 9, 180, 1),
+    rgba(145, 0, 248, 1)
+  );
+  margin-bottom: 2.5rem;
+}
+.mic-circle img {
+  width: 7.25rem;
+}
+.banner-text h2 {
+  color: var(--font-colour);
+  font-size: 3.75rem;
+  font-weight: 800;
+  line-height: 4.56rem;
+  margin-bottom: 0.5rem;
+}
+.banner-text p {
+  color: var(--font-colour);
+  opacity: 0.8;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.18rem;
+  margin-bottom: 1.5rem;
+}
+.buttons {
+  justify-content: center;
+  gap: 0.5rem;
+}
+.btn1,
+.btn2 {
+  text-align: center;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.18rem;
+  border-radius: 62.5rem;
+}
+.btn1 {
+  border: none;
+  color: var(--font-colour);
+  background: linear-gradient(
+    47.64deg,
+    rgba(247, 233, 63, 1),
+    rgba(251, 9, 180, 1),
+    rgba(145, 0, 248, 1)
+  );
+}
+.btn2 {
+  border: 1px solid rgba(0, 255, 136, 1);
+  color: rgba(0, 255, 136, 1);
+  background-color: rgba(26, 11, 46, 1);
 }
 /* about styles */
 /* choice styles */
@@ -89,6 +158,7 @@ hr {
 /* company styles */
 /* copyright styles */
 @media screen and (min-width: 993px) and (max-width: 1200px) {
+  /* nav styles */
   .container {
     max-width: 960px;
   }
@@ -96,8 +166,10 @@ hr {
     gap: 13rem;
     padding: 1.25rem 1.25rem;
   }
+  /* banner styles */
 }
 @media screen and (min-width: 577px) and (max-width: 992px) {
+  /* nav styles */
   .container {
     max-width: 720px;
   }
@@ -121,9 +193,28 @@ hr {
   .logo {
     font-size: 2rem;
   }
+  /* banner styles */
+  .banner-content {
+    max-width: 720px;
+    padding: 2.5rem 1.25rem;
+  }
+  .mic-circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+  }
+  .mic-circle img {
+    width: 5.5rem;
+  }
+  .banner-text h2 {
+    font-size: 2.9rem;
+    line-height: 3rem;
+  }
 }
 
 @media screen and (max-width: 576px) {
+  /* nav styles */
   .container {
     max-width: 440px;
   }
@@ -145,5 +236,23 @@ hr {
   }
   .logo {
     font-size: 1.5rem;
+  }
+  /* banner styles */
+  .banner-content {
+    max-width: 400px;
+    padding: 2.5rem 1.25rem;
+  }
+  .mic-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+  }
+  .mic-circle img {
+    width: 2.9rem;
+  }
+  .banner-text h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
   }
 }
