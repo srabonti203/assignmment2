@@ -88,9 +88,39 @@ hr {
 /* heading styles */
 /* company styles */
 /* copyright styles */
-@media screen and (min-width: 993px) {
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+  .nav-content {
+    gap: 13rem;
+    padding: 1.25rem 1.25rem;
+  }
 }
 @media screen and (min-width: 577px) and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+  .contet-mw {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+  .nav-links,
+  .btn {
+    display: none;
+  }
+  .nav-content {
+    gap: 0rem;
+    padding: 1.25rem 1.25rem;
+  }
+  .ham-icon {
+    display: block;
+    color: var(--font-colour);
+    font-size: 1.5rem;
+  }
+  .logo {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -107,7 +137,7 @@ hr {
   }
   .nav-content {
     gap: 0rem;
-    padding: 1.25rem 0;
+    padding: 1.25rem 1.25rem;
   }
   .ham-icon {
     display: block;
